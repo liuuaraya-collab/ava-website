@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | AVA Executive Services</title>
+  <meta name="description" content="Thailand Path Assessment, visa strategy, relocation, corporate integrity, property coordination, executive concierge and aviation administration. Clear packages and transparent pricing.">
+  <link rel="canonical" href="https://www.avaexecutiveservices.com/pages/services.html">
+  <meta property="og:title" content="Services | AVA Executive Services">
+  <meta property="og:description" content="Structured executive packages for immigration, relocation, corporate, property and concierge support in Thailand.">
+  <link rel="icon" href="../images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0B2545', 50: '#F0F4F8', 100: '#D9E2EC', 800: '#102A43', 900: '#0B2545' },
+            slate: { body: '#212529', muted: '#6C757D', border: '#E2E8F0', mid: '#46505F' },
+            surface: { DEFAULT: '#F8FAFC', white: '#FFFFFF' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            modal: '0 25px 50px -12px rgba(11, 37, 69, 0.25)',
+            card: '0 1px 3px rgba(11, 37, 69, 0.06), 0 4px 12px rgba(11, 37, 69, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body.modal-open { overflow: hidden; }
+    .svc-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      min-height: 11.5rem;
+    }
+    .svc-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11, 37, 69, 0.1); border-color: #0B2545; }
+    .svc-card:focus-visible { outline: 2px solid #0B2545; outline-offset: 2px; }
+    .filter-pill { transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+    .filter-pill.is-active { background: #0B2545; color: #fff; border-color: #0B2545; }
+    #service-modal { opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
+    #service-modal.is-open { opacity: 1; pointer-events: auto; }
+    #service-modal .modal-panel {
+      transform: translateY(12px) scale(0.98);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #service-modal.is-open .modal-panel { transform: translateY(0) scale(1); }
+    @media (max-width: 767px) {
+      #service-modal .modal-panel {
+        transform: translateY(100%);
+        border-radius: 1rem 1rem 0 0 !important;
+        max-height: 92vh !important;
+      }
+      #service-modal.is-open .modal-panel { transform: translateY(0); }
+    }
+    .modal-scroll::-webkit-scrollbar { width: 6px; }
+    .modal-scroll::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+    #modal-title, #modal-tagline, .svc-card h3 {
+      text-wrap: balance;
+    }
+    .modal-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-col ul { flex: 1; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="../index.html" class="nav__logo"><div class="nav__logo-text">AVA<span>Executive Services</span></div></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="private-client.html">Private Client</a>
+        <a href="aviation.html">Aviation</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Book a Consultation</a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="private-client.html">Private Client</a><a href="aviation.html">Aviation</a>
+    <a href="how-it-works.html">How It Works</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Book a Consultation</a>
+  </div>
+
+  <main>
+    <!-- Page intro -->
+    <header class="page-header">
+      <div class="container">
+        <span class="eyebrow">Service Catalogue</span>
+        <h1 class="h1">Services</h1>
+        <p class="lead">Defined packages with clear scope, deliverables and pricing. Select a service to view the full executive brief. Government fees and regulated professional fees are always separate.</p>
+      </div>
+    </header>
+
+    <!-- Interactive showcase -->
+    <section class="section section--white" style="padding-top:0;">
+      <div class="container" style="max-width:1120px;">
+
+        <!-- Category filters -->
+        <div class="flex flex-wrap gap-2 mb-8" id="filter-bar" role="tablist" aria-label="Service categories">
+          <button type="button" class="filter-pill is-active px-4 py-2 rounded-full border border-slate-border text-sm font-medium text-navy bg-white" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="filter-pill px-4 py-2 rounded-full border border-slate-border text-sm font-medium text-slate-mid bg-white hover:border-navy" data-filter="Strategy & Visas" role="tab" aria-selected="false">Strategy &amp; Visas</button>
+          <button type="button" class="filter-pill px-4 py-2 rounded-full border border-slate-border text-sm font-medium text-slate-mid bg-white hover:border-navy" data-filter="Relocation & Living" role="tab" aria-selected="false">Relocation &amp; Living</button>
+          <button type="button" class="filter-pill px-4 py-2 rounded-full border border-slate-border text-sm font-medium text-slate-mid bg-white hover:border-navy" data-filter="Corporate & Integrity" role="tab" aria-selected="false">Corporate &amp; Integrity</button>
+          <button type="button" class="filter-pill px-4 py-2 rounded-full border border-slate-border text-sm font-medium text-slate-mid bg-white hover:border-navy" data-filter="Private Client" role="tab" aria-selected="false">Private Client</button>
+        </div>
+
+        <!-- Service cards grid -->
+        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list"></div>
+
+        <div class="mt-10 p-5 rounded-xl bg-surface border border-slate-border">
+          <p class="text-sm text-slate-mid leading-relaxed m-0">
+            <strong class="text-navy">Important pricing notes.</strong> All prices are starting prices in THB and may vary depending on complexity, urgency, location and scope. Prices are exclusive of VAT unless otherwise stated. Government fees and third-party expenses are generally excluded unless expressly stated in the quotation. See <a href="service-policy.html" class="text-navy underline underline-offset-2">Service Policy</a> for full commercial terms.
+          </p>
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="contact.html" class="btn btn--primary btn--lg">Book a Consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Service Detail Modal -->
+  <div id="service-modal" class="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-8" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop absolute inset-0 bg-navy/60 backdrop-blur-md" data-close-modal></div>
+    <div class="modal-panel relative z-10 w-full max-w-5xl bg-white md:rounded-2xl shadow-modal flex flex-col max-h-[92vh] md:max-h-[90vh] overflow-hidden">
+      <!-- Header -->
+      <div class="flex-shrink-0 px-6 md:px-10 pt-6 md:pt-8 pb-5 border-b border-slate-border">
+        <div class="flex items-start justify-between gap-6">
+          <div class="min-w-0 flex-1 text-left md:text-center md:pr-10">
+            <div class="flex flex-wrap items-center gap-2 mb-3 md:justify-center">
+              <span id="modal-category" class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-wider uppercase text-slate-500 bg-surface border border-slate-border"></span>
+              <span id="modal-code" class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold tracking-wider uppercase bg-navy text-white"></span>
+            </div>
+            <h2 id="modal-title" class="font-display text-xl md:text-2xl font-bold text-[#0B2545] m-0 leading-tight"></h2>
+            <p id="modal-tagline" class="text-sm md:text-base text-slate-muted mt-2 mb-0 leading-relaxed"></p>
+          </div>
+          <button type="button" id="modal-close" class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-slate-muted hover:bg-surface hover:text-navy transition-colors" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable body -->
+      <div class="modal-scroll flex-1 overflow-y-auto">
+        <!-- Quick facts — equal thirds -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 sm:divide-x sm:divide-slate-200 bg-surface border-b border-slate-border">
+          <div class="px-6 md:px-8 py-5 text-center sm:text-center border-b sm:border-b-0 border-slate-border">
+            <div class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-2">Standard Fee</div>
+            <div id="modal-fee" class="text-sm font-semibold text-[#0B2545] leading-snug"></div>
+          </div>
+          <div class="px-6 md:px-8 py-5 text-center border-b sm:border-b-0 border-slate-border">
+            <div class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-2">Timeline</div>
+            <div id="modal-timeline" class="text-sm font-semibold text-[#0B2545] leading-snug"></div>
+          </div>
+          <div class="px-6 md:px-8 py-5 text-center">
+            <div class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-2">Target Profile</div>
+            <div id="modal-profile" class="text-sm text-[#212529] leading-snug"></div>
+          </div>
+        </div>
+
+        <!-- Two-column body — 50/50 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8 px-6 md:px-10 py-8 items-start">
+          <div class="modal-col">
+            <h3 class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-1">Scope of Work</h3>
+            <p class="text-xs text-slate-muted mb-4">What AVA manages</p>
+            <ul id="modal-scope" class="space-y-3 text-sm text-[#212529] leading-relaxed m-0 p-0 list-none"></ul>
+          </div>
+          <div class="modal-col">
+            <h3 class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-1">Client Deliverables</h3>
+            <p class="text-xs text-slate-muted mb-4">What you receive</p>
+            <ul id="modal-deliverables" class="space-y-3 text-sm text-[#212529] leading-relaxed m-0 p-0 list-none"></ul>
+          </div>
+        </div>
+
+        <!-- Prerequisites & Exclusions — balanced sub-boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 md:px-10 pb-8">
+          <div class="rounded-xl border border-slate-border bg-surface p-6">
+            <h4 class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-4">Prerequisites &amp; Client Inputs</h4>
+            <ul id="modal-prerequisites" class="space-y-2.5 text-sm text-[#212529] leading-relaxed m-0 p-0 list-none"></ul>
+          </div>
+          <div class="rounded-xl border border-slate-border bg-surface p-6">
+            <h4 class="text-xs font-bold uppercase tracking-wide text-[#46505F] mb-4">Exclusions &amp; Boundaries</h4>
+            <ul id="modal-exclusions" class="space-y-2.5 text-sm text-[#212529] leading-relaxed m-0 p-0 list-none"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="flex-shrink-0 px-6 md:px-10 py-5 border-t border-slate-border bg-white">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+          <a id="modal-cta" href="contact.html" class="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-navy text-white text-sm font-semibold hover:bg-navy-800 transition-colors no-underline">
+            Request Formal Engagement
+          </a>
+          <a href="contact.html" class="text-sm text-slate-muted hover:text-navy transition-colors no-underline text-center sm:text-right">Or book a consultation →</a>
+        </div>
+        <p class="text-[11px] leading-relaxed text-slate-muted m-0">
+          AVA Executive Services operates strictly as an administrative management and executive support firm. We do not provide formal legal opinions, court advocacy, or certified public accounting services. All technical legal and statutory audit matters are coordinated directly with licensed Thai attorneys and registered CPAs. Final approvals remain at the sole discretion of the Royal Thai Government.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">AVA<span>Executive Services</span></div>
+          <p>Independent client-side coordination, local execution and Thailand intelligence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">All Services</a>
+          <a href="private-client.html">Private Client</a>
+          <a href="aviation.html">Aviation</a>
+          <a href="how-it-works.html">How It Works</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="service-policy.html">Service Policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> AVA Executive Services. All rights reserved.</span>
+        <span>Private. Professional. Personal.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+  (function () {
+    "use strict";
+
+    /** @type {Array<Object>} Full service catalogue */
+    const SERVICES = [
+      {
+        id: "path-assessment",
+        code: "SP01",
+        category: "Strategy & Visas",
+        title: "Thailand Path Assessment",
+        tagline: "Structured private-office assessment before you commit to a larger assignment.",
+        fee: "THB 2,500",
+        timeline: "2–3 business days from complete intake",
+        targetProfile: "Individuals, executives, families, entrepreneurs, or investors uncertain about the appropriate administrative route.",
+        scope: [
+          "Collect and review nationality, passport status, intended stay, family or dependants, current Thailand status, business or employment context, and primary objectives.",
+          "Map potential immigration and business pathways at a high level, such as DTV, LTR, Non-Immigrant categories, Thailand Privilege, company-based routes, or BOI-related options where relevant.",
+          "Identify obvious document, timing, sequencing, and authority dependencies.",
+          "Conduct one structured consultation of up to 45 minutes.",
+          "Prepare a concise recommended-pathway summary and next-step action sequence."
+        ],
+        deliverables: [
+          "Thailand Path Summary (typically 2 pages).",
+          "Priority action checklist with prerequisites, likely authority touchpoints, and decision dependencies.",
+          "Fee-credit confirmation for an eligible follow-on package, if applicable."
+        ],
+        prerequisites: [
+          "Completed intake questionnaire and accurate client information.",
+          "Current passport bio page and relevant Thailand status / entry pages.",
+          "High-level statement of business, family, or relocation objectives."
+        ],
+        exclusions: [
+          "Filing applications, drafting legal opinions, tax planning, or statutory audits.",
+          "Guarantee of immigration or corporate eligibility.",
+          "Where technical legal or tax analysis is required, AVA identifies the need for an appropriately licensed professional."
+        ]
+      },
+      {
+        id: "visa-strategy",
+        code: "SP02",
+        category: "Strategy & Visas",
+        title: "Visa & Residency Strategy",
+        tagline: "Private case planning for long-term residence workstreams in Thailand.",
+        fee: "From THB 7,500",
+        timeline: "3–5 business days after complete intake",
+        targetProfile: "Executives, business owners, families, and long-term residents requiring a documented residency plan.",
+        scope: [
+          "Review relevant immigration history, current status, intended duration, family structure, and stated work or business context.",
+          "Compare pathways on administrative criteria such as documentation burden, renewal rhythm, work-authorisation considerations, family treatment, and sequencing.",
+          "Coordinate with tax counsel when intended stay or income structure creates tax questions.",
+          "Identify potential historical-document issues or transition points for immigration counsel review.",
+          "Prepare an implementation sequence and professional handover points."
+        ],
+        deliverables: [
+          "Strategic Residency Blueprint or case memorandum summarising the pathways considered.",
+          "Document-readiness checklist covering civil, financial, employment, corporate, or travel-history documents that may be required.",
+          "Introduction or handover to an appropriate licensed professional or official channel where specialised review is necessary."
+        ],
+        prerequisites: [
+          "Passport and relevant immigration history.",
+          "Current and prior visa / extension documents where available.",
+          "Family civil documents where applicable.",
+          "Relevant business, employment, or financial information where necessary for the selected pathway."
+        ],
+        exclusions: [
+          "Legal opinions, tax opinions, embassy or immigration filing fees, certified translations, legalisation, or personal attendance costs unless separately quoted.",
+          "Tax residency analysis is administrative coordination only; formal tax advice must be provided by a qualified tax professional."
+        ]
+      },
+      {
+        id: "dtv",
+        code: "SP03",
+        category: "Strategy & Visas",
+        title: "DTV / Digital Nomad Support",
+        tagline: "Administrative preparation and submission coordination for the Destination Thailand Visa.",
+        fee: "THB 19,500",
+        timeline: "5–10 business days for dossier preparation once documents are complete",
+        targetProfile: "Remote workers, freelancers, digital professionals, and eligible soft-power activity participants, plus eligible dependants.",
+        scope: [
+          "Administrative eligibility screen against requirements communicated by the relevant Thai mission or e-Visa channel.",
+          "Organise financial evidence, passport information, purpose-of-visit evidence, employment or professional portfolio documents, and other required records.",
+          "Structure and quality-check the submission pack for consistency and completeness.",
+          "Provide administrative navigation of the Thai e-Visa application process where applicable.",
+          "Monitor status and coordinate responses to reasonable clarification requests within the agreed scope.",
+          "Provide a pre-arrival administrative briefing covering stay-period management, extensions, and ongoing compliance reminders."
+        ],
+        deliverables: [
+          "Ready-to-submit DTV document pack / application checklist.",
+          "Employer or professional confirmation templates, where relevant.",
+          "Status tracker and clarification-response coordination within the agreed scope.",
+          "Post-approval settlement and compliance checklist."
+        ],
+        prerequisites: [
+          "Passport with sufficient validity for the application.",
+          "Proof of current location, financial evidence, and purpose-of-visit evidence as required by the issuing authority.",
+          "Employment, client contracts, professional portfolio, or eligible activity evidence as applicable."
+        ],
+        exclusions: [
+          "Government visa fees and third-party charges.",
+          "AVA does not decide eligibility or issue the visa; the relevant Thai mission or authority makes the decision.",
+          "Tax returns, tax opinions, or employment-law opinions."
+        ]
+      },
+      {
+        id: "soft-landing",
+        code: "SP04",
+        category: "Relocation & Living",
+        title: "Executive Soft Landing & Settlement",
+        tagline: "Focused arrival-to-settlement coordination during the first days in Thailand.",
+        fee: "THB 19,500",
+        timeline: "14 calendar days from the agreed service start date / arrival window",
+        targetProfile: "Newly arrived executives, entrepreneurs, families, and long-term residents who want one private point of coordination.",
+        scope: [
+          "Coordinate airport transfer, meet-and-assist, or other arrival services requested by the client, subject to vendor availability.",
+          "Coordinate accommodation-related TM30 notification inputs and submission where the process permits AVA involvement.",
+          "Coordinate local SIM / telecom activation and residential utility setup.",
+          "Prepare banking administration packs and coordinate introductions or appointments; final account opening remains subject to the bank’s KYC and approval.",
+          "Provide a practical local-living orientation covering emergency contacts, healthcare, transport, and core daily services."
+        ],
+        deliverables: [
+          "Arrival / settlement checklist and status tracker.",
+          "TM30 submission record where applicable and accepted by the relevant authority.",
+          "Banking appointment coordination and document pack.",
+          "Telecom / utility activation confirmations where the provider completes setup.",
+          "Executive neighbourhood / practical-living briefing."
+        ],
+        prerequisites: [
+          "Valid passport and current Thailand entry / permission documents.",
+          "Lease or ownership documents and relevant landlord / property documents.",
+          "Bank-specific KYC information as requested by the chosen financial institution."
+        ],
+        exclusions: [
+          "Vendor charges, airport fast-track fees, transfers, deposits, subscription fees, and bank minimum balances.",
+          "AVA cannot guarantee that a bank will open an account, provide a specific card, approve a transfer, or accept a particular document."
+        ]
+      },
+      {
+        id: "relocation-essentials",
+        code: "SP05",
+        category: "Relocation & Living",
+        title: "Relocation Essentials",
+        tagline: "Foundational administrative support for establishing a practical day-to-day base in Thailand.",
+        fee: "From THB 39,500",
+        timeline: "Approximately 2–4 weeks, subject to appointments and client readiness",
+        targetProfile: "Foreign residents and families requiring a structured relocation checklist.",
+        scope: [
+          "Coordinate driving-licence application steps, residence-document requirements, translation or medical appointments, and Department of Land Transport appointments where applicable.",
+          "Coordinate vehicle purchase or transfer administration, including document collection and insurer contact.",
+          "Perform an administrative completeness check of lease and onboarding documents; refer legal review to counsel where contractual interpretation is required.",
+          "Coordinate utilities, telecoms, domestic-service onboarding, and other selected settlement tasks."
+        ],
+        deliverables: [
+          "Relocation action plan and task tracker.",
+          "Appointment schedule and submission-status record.",
+          "Vehicle / lease / utility document checklist.",
+          "Completion pack containing receipts, confirmation records, and any official documents actually issued."
+        ],
+        prerequisites: [
+          "Passport, existing licence / IDP where relevant, medical documents, lease / vehicle documents, and landlord information.",
+          "Timely attendance by the client where the authority requires personal appearance."
+        ],
+        exclusions: [
+          "Government fees, vehicle tax, insurance premiums, medical fees, utility deposits, and supplier charges.",
+          "AVA does not provide legal advice on leases or vehicle contracts."
+        ]
+      },
+      {
+        id: "family-relocation",
+        code: "SP06",
+        category: "Relocation & Living",
+        title: "Family Relocation & Education Onboarding",
+        tagline: "Coordinated family settlement covering education, healthcare, dependants, and household logistics.",
+        fee: "From THB 69,500",
+        timeline: "3–6 weeks, subject to school / hospital / authority availability",
+        targetProfile: "Families relocating to Thailand with spouses, children, or household support requirements.",
+        scope: [
+          "Create a school-search brief and coordinate enquiries, tours, admissions administration, and required document packs.",
+          "Coordinate family immigration / dependant document sequences with the selected immigration pathway.",
+          "Coordinate healthcare provider introductions and insurance quotations through authorised providers.",
+          "Coordinate household staffing introductions through legitimate third-party providers, if requested.",
+          "Maintain a central family relocation tracker covering deadlines and dependencies."
+        ],
+        deliverables: [
+          "Family relocation master checklist.",
+          "School comparison / enquiry report based on the client’s stated criteria and available information.",
+          "Admissions and document coordination log.",
+          "Healthcare / insurance quotation coordination record.",
+          "Household-services shortlist, where requested and available."
+        ],
+        prerequisites: [
+          "Passports, birth / marriage certificates, school records, medical or immunisation records, and the principal applicant’s immigration documents as applicable.",
+          "Client decisions on school, healthcare, insurer, and staffing vendors."
+        ],
+        exclusions: [
+          "School tuition, admission fees, deposits, insurance premiums, staffing salaries / placement fees, medical charges, and immigration fees.",
+          "AVA does not guarantee admission, insurance acceptance, medical availability, or staffing suitability."
+        ]
+      },
+      {
+        id: "executive-relocation",
+        code: "SP07",
+        category: "Relocation & Living",
+        title: "Executive Turnkey Solution",
+        tagline: "Dedicated project management for complex personal and corporate establishment under one private-office mandate.",
+        fee: "From THB 125,000",
+        timeline: "Typically 1–3 months; longer mandates available by agreement",
+        targetProfile: "C-suite executives, founders, family offices, and other high-complexity private clients.",
+        scope: [
+          "Establish a master plan covering immigration, residence, business, property, family, banking, travel, and other selected workstreams.",
+          "Coordinate licensed lawyers, accountants, tax advisers, brokers, schools, hospitals, aviation providers, and other third parties as needed.",
+          "Manage milestone calendars, meeting schedules, document flows, approvals, and executive reporting.",
+          "Coordinate property, residence, household, transportation, and private-concierge vendors.",
+          "Provide high-touch escalation and issue management during the engagement."
+        ],
+        deliverables: [
+          "Master workstream plan and milestone tracker.",
+          "Centralised executive document index.",
+          "Weekly or agreed-interval status reporting.",
+          "Completion / handover pack for each closed workstream.",
+          "Dedicated executive contact channel during agreed service hours; 24/7 coverage only where expressly included."
+        ],
+        prerequisites: [
+          "Signed engagement / mandate, client identity and authority documents, and clear commercial / personal instructions.",
+          "Timely access to external professional advisers and decision-makers."
+        ],
+        exclusions: [
+          "Luxury brokerage fees, legal / tax adviser fees, supplier contracts, government charges, travel, security, transport, and other third-party costs.",
+          "AVA does not guarantee off-market property availability, banking outcomes, visa approval, or other third-party outcomes."
+        ]
+      },
+      {
+        id: "business-launch",
+        code: "SP08",
+        category: "Corporate & Integrity",
+        title: "Business Launch & Entity Establishment",
+        tagline: "Administrative project management for establishing a Thai business structure, with regulated work handled by licensed professionals.",
+        fee: "From THB 35,000",
+        timeline: "Typically 3–6 weeks for a straightforward setup after structure and documents are agreed",
+        targetProfile: "Foreign investors, entrepreneurs, regional businesses, and founders establishing a presence in Thailand.",
+        scope: [
+          "Map the proposed business activity against the relevant corporate and foreign-business framework at an administrative level, identifying where legal advice is required.",
+          "Coordinate company-name reservation and preparation / submission of DBD incorporation documents.",
+          "Coordinate statutory meetings and corporate document execution.",
+          "Coordinate tax ID, VAT, Social Security, and other registrations where required.",
+          "Coordinate corporate bank-account application packs and appointments; bank KYC and approval remain with the bank.",
+          "Coordinate work-permit / immigration workstreams with the appointed professional and relevant authorities where applicable."
+        ],
+        deliverables: [
+          "Corporate setup checklist and master timeline.",
+          "DBD-issued corporate documents actually obtained in the engagement.",
+          "Tax / VAT / employer-registration documents actually issued, where applicable.",
+          "Banking application pack and appointment record.",
+          "Immigration / work-authorisation document tracker, if included."
+        ],
+        prerequisites: [
+          "Proposed company names, shareholder / director identification, registered-address documents, signed authorities / powers of attorney where needed, and business-activity information.",
+          "Access to legal and accounting professionals when required."
+        ],
+        exclusions: [
+          "Legal opinions, complex FBA analysis, BOI legal submissions, statutory audit sign-off, ongoing accounting / tax filings, and sector-specific licensing unless separately contracted through the appropriate licensed professional.",
+          "Capital / staffing thresholds differ by structure and facts; AVA will not present a single generic rule as universally applicable."
+        ]
+      },
+      {
+        id: "integrity-review",
+        code: "SP09",
+        category: "Corporate & Integrity",
+        title: "Corporate Integrity & Governance Review",
+        tagline: "Administrative and document-level review of an existing Thai corporate file to identify gaps, mismatches, and handover needs.",
+        fee: "From THB 25,000",
+        timeline: "7–10 business days after receipt of the required records",
+        targetProfile: "Existing Thai companies, subsidiaries, investors, and management teams seeking a structured corporate-file health review.",
+        scope: [
+          "Compare available DBD records with the company’s internal corporate information and current instructions.",
+          "Check administrative consistency of directors, authorised signatories, registered address, capital, shareholder information, and available corporate books.",
+          "Review selected tax / financial / Social Security records for obvious administrative gaps; detailed tax or audit conclusions are referred to licensed accountants.",
+          "Track foreign staff / work-authorisation records against supplied information and identify items requiring professional verification.",
+          "Produce an issue register and prioritised remediation sequence."
+        ],
+        deliverables: [
+          "Corporate administrative health report.",
+          "Document / registry discrepancy schedule.",
+          "Priority remediation roadmap.",
+          "Professional handover list identifying where legal, accounting, tax, or labour advice is required."
+        ],
+        prerequisites: [
+          "Current DBD records, shareholder / director information, corporate books, and available tax / accounting records.",
+          "Relevant employee / work-authorisation list where that review is included."
+        ],
+        exclusions: [
+          "Does not constitute a statutory audit, legal opinion, tax audit, fraud investigation, forensic review, or certification by a licensed CPA.",
+          "AVA will not label a company “compliant” solely from an administrative review; the report distinguishes visible administrative status from matters requiring professional verification."
+        ]
+      },
+      {
+        id: "remediation",
+        code: "SP10",
+        category: "Corporate & Integrity",
+        title: "Remediation Coordination & Retainers",
+        tagline: "Ongoing executive administration for corrective actions, compliance calendars, renewals, and multi-adviser coordination.",
+        fee: "Custom quotation / monthly retainer based on scope and complexity",
+        timeline: "Milestone project or continuing monthly retainer",
+        targetProfile: "Companies undergoing structural changes, director / address / capital updates, recurring immigration work, or ongoing executive administration.",
+        scope: [
+          "Coordinate corrective DBD or administrative submissions based on instructions from the company and its legal / accounting advisers.",
+          "Maintain immigration and employment-expiry trackers for agreed personnel.",
+          "Coordinate meetings and document flow between management, lawyers, accountants, tax advisers, and authorities.",
+          "Maintain a statutory and corporate calendar based on deadlines supplied or verified with the responsible professional.",
+          "Provide recurring management reporting on open items, dependencies, and next actions."
+        ],
+        deliverables: [
+          "Active issue tracker and deadline calendar.",
+          "Monthly or agreed-interval status report.",
+          "Document submission / receipt register.",
+          "Executive management pack summarising open and completed actions."
+        ],
+        prerequisites: [
+          "Signed mandate / authority documents.",
+          "Current corporate and personal identification records.",
+          "Access to responsible lawyers / accountants / advisers for matters requiring professional judgement."
+        ],
+        exclusions: [
+          "Official filing fees, publication charges, statutory audit fees, legal-opinion fees, accounting fees, and taxes.",
+          "AVA does not replace the company’s registered accountant, auditor, lawyer, or tax adviser."
+        ]
+      },
+      {
+        id: "integrity-retainer",
+        code: "SP11",
+        category: "Corporate & Integrity",
+        title: "Corporate Integrity Retainer",
+        tagline: "Ongoing corporate administration, compliance tracking, expiry monitoring, and administrative risk review.",
+        fee: "From THB 25,000 / month",
+        timeline: "Continuing monthly retainer",
+        targetProfile: "Thai companies, foreign-owned businesses, international executives, and business owners requiring ongoing administrative oversight.",
+        scope: [
+          "Maintain an ongoing corporate compliance calendar.",
+          "Track expiry and renewal dates for agreed registrations, licences, permits, visas, and other time-sensitive documents.",
+          "Maintain corporate document and registration records.",
+          "Coordinate routine government filings and administrative follow-up within the agreed scope.",
+          "Track director, company, and agreed personnel-related administrative requirements.",
+          "Conduct periodic administrative risk reviews.",
+          "Coordinate communication and document flow between management and appointed lawyers, accountants, tax advisers, and other professionals.",
+          "Monitor outstanding actions, dependencies, and upcoming deadlines.",
+          "Provide recurring management reporting on open, completed, and upcoming matters."
+        ],
+        deliverables: [
+          "Centralised Corporate Compliance Calendar.",
+          "Expiry & Renewal Tracker.",
+          "Corporate Document Register.",
+          "Administrative Risk Review.",
+          "Monthly or agreed-period Management Status Report.",
+          "Outstanding Action & Deadline Tracker.",
+          "Submission / Follow-up Record for agreed matters."
+        ],
+        prerequisites: [
+          "Signed engagement / retainer agreement.",
+          "Current corporate registration and identification records.",
+          "Access to relevant corporate documents and existing compliance records.",
+          "Current information regarding directors, employees, expatriates, licences, registrations, and other agreed matters.",
+          "Access to appointed lawyers, accountants, tax advisers, or other professionals where specialist judgement is required."
+        ],
+        exclusions: [
+          "Government filing fees, taxes, publication charges, statutory audit fees, legal fees, accounting fees, and other third-party professional charges.",
+          "AVA does not provide legal opinions, tax advice, accounting advice, statutory audit services, or other regulated professional advice.",
+          "AVA does not guarantee that a company is legally or technically compliant solely as a result of administrative monitoring.",
+          "Scope, reporting frequency, response times, and task volume are defined in the signed retainer agreement."
+        ]
+      },
+      {
+        id: "professional-coordination",
+        code: "SP12",
+        category: "Corporate & Integrity",
+        title: "Independent Professional Coordination",
+        tagline: "Client-side coordination across lawyers, accountants, tax advisers, and other specialists.",
+        fee: "From THB 5,000 / project or from THB 25,000 / month",
+        timeline: "Project-based or continuing monthly retainer",
+        targetProfile: "Business owners, executives, investors, families, and private clients managing matters involving multiple professional advisers.",
+        scope: [
+          "Coordinate communication between the client and appointed professional advisers.",
+          "Organise document collection and information flow.",
+          "Coordinate meetings, calls, appointments, and follow-up actions.",
+          "Maintain project timelines and action registers.",
+          "Track submissions, responses, outstanding information, and deadlines.",
+          "Follow up with lawyers, accountants, tax advisers, consultants, and other specialists on administrative matters.",
+          "Coordinate supporting vendors and service providers where required.",
+          "Consolidate information from multiple advisers into a clear administrative status overview.",
+          "Escalate outstanding or delayed matters to the client for decision or further instruction."
+        ],
+        deliverables: [
+          "Centralised Professional Contact & Communication Structure.",
+          "Document and Information Tracker.",
+          "Action & Deadline Register.",
+          "Meeting and Appointment Schedule.",
+          "Consolidated Project Status Updates.",
+          "Follow-up and Communication Records.",
+          "Outstanding-Matter Tracker.",
+          "Clear identification of matters requiring client decision or specialist professional advice."
+        ],
+        prerequisites: [
+          "Signed engagement / coordination mandate.",
+          "Clear identification of the professionals and specialists already appointed.",
+          "Relevant client documents and background information.",
+          "Authorisation to communicate with appointed professionals where required.",
+          "Timely client decisions and instructions."
+        ],
+        exclusions: [
+          "AVA does not replace or supervise the professional judgement of lawyers, accountants, tax advisers, auditors, medical professionals, engineers, or other licensed specialists.",
+          "Professional advice, legal opinions, accounting work, tax filings, statutory audits, and other regulated work are excluded unless provided directly by the appropriate professional.",
+          "Third-party professional fees and government charges are excluded.",
+          "AVA does not guarantee the outcome of work performed by an external professional or authority."
+        ]
+      },
+      {
+        id: "property",
+        code: "SP13",
+        category: "Private Client",
+        title: "Property Transaction Coordination",
+        tagline: "Administrative coordination from document collection and Land Office preparation through transfer-day support and handover.",
+        fee: "From THB 20,000 per transaction",
+        timeline: "Transaction-based; aligned with the agreed transaction and Land Office closing schedule",
+        targetProfile: "Property buyers, sellers, landlords, tenants, investors, executives, and international clients completing property transactions in Thailand.",
+        scope: [
+          "Coordinate collection of transaction-related documents.",
+          "Maintain a property transaction checklist and document tracker.",
+          "Coordinate communication between clients, agents, owners, counterparties, lawyers, and other relevant parties.",
+          "Coordinate Land Office appointments and administrative requirements.",
+          "Organise supporting documents required for the agreed transaction process.",
+          "Coordinate transfer-day logistics and attendance where included.",
+          "Follow up on outstanding administrative requirements.",
+          "Collect and organise official transaction records, receipts, and supporting documents.",
+          "Prepare a final administrative handover file."
+        ],
+        deliverables: [
+          "Property Transaction Checklist.",
+          "Centralised Document Tracker.",
+          "Land Office Appointment Coordination.",
+          "Administrative Closing Schedule.",
+          "Transfer-Day Support where included.",
+          "Submission and Receipt Records.",
+          "Organised Transaction Handover File.",
+          "Status updates throughout the agreed transaction period."
+        ],
+        prerequisites: [
+          "Property and transaction information.",
+          "Identification documents for the relevant parties.",
+          "Available title / property documentation.",
+          "Signed transaction or engagement documents where applicable.",
+          "Access to the client’s appointed lawyer or property professional where legal review is required.",
+          "Timely provision of documents and instructions."
+        ],
+        exclusions: [
+          "Government transfer fees, taxes, duties, registration charges, and other official costs.",
+          "Legal review of purchase agreements, leases, title, ownership structures, or contractual terms unless provided by an appropriately qualified professional.",
+          "AVA does not provide legal or tax opinions concerning the transaction.",
+          "AVA does not guarantee completion, ownership approval, financing, registration, or any decision by the Land Office or another authority.",
+          "Third-party broker, lawyer, surveyor, valuation, translation, and other professional fees."
+        ]
+      },
+      {
+        id: "concierge",
+        code: "SP14",
+        category: "Private Client",
+        title: "Executive Concierge",
+        tagline: "Dedicated private-office support for appointments, government matters, personal administration, and selected executive tasks.",
+        fee: "From THB 30,000 / month",
+        timeline: "Continuing monthly retainer",
+        targetProfile: "Executives, founders, entrepreneurs, private clients, and families who value discretion and one trusted point of coordination.",
+        scope: [
+          "Coordinate personal and professional appointments.",
+          "Coordinate selected government-office matters.",
+          "Manage agreed personal administrative requests.",
+          "Coordinate property, household, vehicle, and service-provider tasks.",
+          "Arrange appointments with healthcare and professional providers.",
+          "Coordinate local bookings and practical arrangements.",
+          "Track outstanding personal and executive requests.",
+          "Follow up with service providers and third parties.",
+          "Maintain an agreed executive task list and priority schedule.",
+          "Provide ongoing communication and status updates."
+        ],
+        deliverables: [
+          "Dedicated Executive Communication Channel.",
+          "Personal Task & Request Tracker.",
+          "Appointment and Scheduling Coordination.",
+          "Government Support Coordination.",
+          "Personal Administration Support.",
+          "Follow-up and Status Updates.",
+          "Consolidated Record of Active Requests.",
+          "One professional point of coordination for agreed matters."
+        ],
+        prerequisites: [
+          "Signed monthly retainer agreement.",
+          "Clear identification of authorised tasks and service boundaries.",
+          "Client identification and supporting documents where required.",
+          "Timely instructions, approvals, and payment authorisations.",
+          "Advance notice for appointments, travel, government matters, or time-sensitive requests where possible."
+        ],
+        exclusions: [
+          "Third-party vendor charges, government fees, reservations, transportation, accommodation, medical expenses, and other external costs unless expressly stated.",
+          "AVA does not provide legal, medical, financial, tax, or other regulated professional advice.",
+          "Tasks outside the agreed scope may require a separate quotation or additional fee.",
+          "Availability, response time, and service hours are defined by the retainer agreement.",
+          "AVA does not guarantee the availability, pricing, or performance of external service providers."
+        ]
+      },
+      {
+        id: "trip-design",
+        code: "SP15",
+        category: "Private Client",
+        title: "Thailand Trip Design",
+        tagline: "Bespoke itinerary planning, logistics coordination, and private concierge support around the client’s priorities and schedule.",
+        fee: "From THB 15,000 per trip / service window",
+        timeline: "Project-based; aligned with the agreed planning period and travel dates",
+        targetProfile: "Private clients, executives, families, visiting business partners, and international travellers seeking a personalised Thailand experience.",
+        scope: [
+          "Conduct an initial trip-planning consultation.",
+          "Develop a customised Thailand itinerary based on the client’s interests, schedule, and priorities.",
+          "Coordinate accommodation recommendations and booking arrangements where requested.",
+          "Coordinate transportation and inter-city logistics.",
+          "Coordinate restaurant reservations and selected activities.",
+          "Coordinate appointments, experiences, and private services.",
+          "Organise practical travel information and day-to-day logistics.",
+          "Coordinate changes and adjustments during the agreed service window.",
+          "Provide concierge-style administrative support throughout the agreed engagement."
+        ],
+        deliverables: [
+          "Personalised Thailand Itinerary.",
+          "Day-by-Day Schedule.",
+          "Transportation & Logistics Plan.",
+          "Reservation and Appointment Coordination.",
+          "Curated Recommendations based on the client’s preferences.",
+          "Booking and Contact Information.",
+          "Agreed-period Concierge Support.",
+          "Practical assistance with itinerary changes within the agreed scope."
+        ],
+        prerequisites: [
+          "Travel dates and duration.",
+          "Number of travellers and relevant personal requirements.",
+          "Preferred destinations, interests, accommodation standards, and travel style.",
+          "Budget guidance where required for planning.",
+          "Passport and traveller information where required for reservations or third-party services.",
+          "Clear confirmation of the requested service window."
+        ],
+        exclusions: [
+          "Hotels, flights, transportation, restaurants, activities, attraction tickets, private guides, security, and other third-party charges unless expressly stated.",
+          "AVA does not act as an airline, hotel, tour operator, travel insurer, licensed guide, or transportation provider.",
+          "Travel insurance, visas, medical expenses, and other personal travel costs unless separately coordinated.",
+          "Availability and pricing are subject to third-party providers.",
+          "Changes outside the agreed itinerary or service scope may incur additional fees."
+        ]
+      }
+    ];
+
+    const grid = document.getElementById("services-grid");
+    const modal = document.getElementById("service-modal");
+    const filterBar = document.getElementById("filter-bar");
+    let activeFilter = "all";
+    let lastFocus = null;
+
+    function bulletList(items, withCheck) {
+      return items.map(function (item) {
+        var parts = item.split(/\s+/);
+        var head = parts.shift() || "";
+        var rest = parts.join(" ");
+        var label = rest
+          ? '<span class="font-semibold text-[#0B2545]">' + head + "</span> " + rest
+          : '<span class="font-semibold text-[#0B2545]">' + head + "</span>";
+        if (withCheck) {
+          return (
+            '<li class="flex gap-3">' +
+            '<span class="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full bg-navy/10 text-navy flex items-center justify-center">' +
+            '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>' +
+            '<span class="text-[#212529] leading-relaxed">' + label + "</span></li>"
+          );
+        }
+        return (
+          '<li class="flex gap-3">' +
+          '<span class="flex-shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-navy/50"></span>' +
+          '<span class="text-[#212529] leading-relaxed">' + label + "</span></li>"
+        );
+      }).join("");
+    }
+
+    function cardHTML(s) {
+      return (
+        '<article class="svc-card group cursor-pointer rounded-xl border border-slate-border bg-white p-6 shadow-card flex flex-col h-full justify-between" role="listitem" tabindex="0" data-id="' + s.id + '" aria-label="View details for ' + s.title + '">' +
+        '<div>' +
+        '<div class="flex items-center justify-between gap-2 mb-3">' +
+        '<span class="text-xs font-semibold tracking-wider uppercase text-slate-500">' + s.code + "</span>" +
+        '<span class="text-xs text-slate-muted truncate">' + s.category + "</span>" +
+        "</div>" +
+        '<h3 class="font-display text-lg font-bold text-[#0B2545] m-0 mb-2 leading-tight group-hover:underline underline-offset-2">' + s.title + "</h3>" +
+        '<p class="text-sm text-slate-muted m-0 leading-relaxed">' + s.tagline + "</p>" +
+        "</div>" +
+        '<div class="flex items-end justify-between gap-3 pt-4 mt-4 border-t border-slate-border">' +
+        '<span class="text-sm font-semibold text-[#0B2545] leading-snug">' + s.fee.split("(")[0].trim() + "</span>" +
+        '<span class="text-xs font-medium text-slate-muted whitespace-nowrap">View brief →</span>' +
+        "</div></article>"
+      );
+    }
+
+    function renderGrid() {
+      const list = activeFilter === "all"
+        ? SERVICES
+        : SERVICES.filter(function (s) { return s.category === activeFilter; });
+      grid.innerHTML = list.map(cardHTML).join("");
+    }
+
+    function openModal(id) {
+      const s = SERVICES.find(function (x) { return x.id === id; });
+      if (!s) return;
+      lastFocus = document.activeElement;
+
+      document.getElementById("modal-category").textContent = s.category;
+      document.getElementById("modal-code").textContent = s.code;
+      document.getElementById("modal-title").textContent = s.title;
+      document.getElementById("modal-tagline").textContent = s.tagline;
+      document.getElementById("modal-fee").textContent = s.fee;
+      document.getElementById("modal-timeline").textContent = s.timeline;
+      document.getElementById("modal-profile").textContent = s.targetProfile;
+      document.getElementById("modal-scope").innerHTML = bulletList(s.scope, false);
+      document.getElementById("modal-deliverables").innerHTML = bulletList(s.deliverables, true);
+      document.getElementById("modal-prerequisites").innerHTML = bulletList(s.prerequisites, false);
+      document.getElementById("modal-exclusions").innerHTML = bulletList(s.exclusions, false);
+      document.getElementById("modal-cta").href = "contact.html?service=" + encodeURIComponent(s.id);
+
+      modal.hidden = false;
+      requestAnimationFrame(function () {
+        modal.classList.add("is-open");
+      });
+      document.body.classList.add("modal-open");
+      document.getElementById("modal-close").focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      document.body.classList.remove("modal-open");
+      setTimeout(function () {
+        modal.hidden = true;
+        if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+      }, 220);
+    }
+
+    // Filters
+    filterBar.addEventListener("click", function (e) {
+      const btn = e.target.closest("[data-filter]");
+      if (!btn) return;
+      activeFilter = btn.getAttribute("data-filter");
+      filterBar.querySelectorAll(".filter-pill").forEach(function (b) {
+        const on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      renderGrid();
+    });
+
+    // Cards — click & keyboard
+    grid.addEventListener("click", function (e) {
+      const card = e.target.closest("[data-id]");
+      if (card) openModal(card.getAttribute("data-id"));
+    });
+    grid.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const card = e.target.closest("[data-id]");
+      if (!card) return;
+      e.preventDefault();
+      openModal(card.getAttribute("data-id"));
+    });
+
+    // Modal close controls
+    document.getElementById("modal-close").addEventListener("click", closeModal);
+    modal.addEventListener("click", function (e) {
+      if (e.target.hasAttribute("data-close-modal")) closeModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    });
+
+    // Deep-link support: services.html?open=path-assessment
+    renderGrid();
+    const params = new URLSearchParams(window.location.search);
+    const openId = params.get("open");
+    if (openId && SERVICES.some(function (s) { return s.id === openId; })) {
+      setTimeout(function () { openModal(openId); }, 300);
+    }
+  })();
+  </script>
+</body>
+</html>
