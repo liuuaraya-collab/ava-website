@@ -4,181 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | AVA Executive Services</title>
-  <meta name="description" content="Request a confidential consultation with AVA Executive Services. We respond within one business day.">
+  <meta name="description" content="Tell us what you need to handle in Thailand. Confidential consultation requests welcome.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.avaexecutiveservices.com/pages/contact.html">
+  <meta property="og:title" content="Contact | AVA Executive Services">
+  <meta property="og:description" content="Tell us what you need to handle in Thailand. Confidential consultation requests welcome.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="../images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;550;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDE27RD3ZE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GDE27RD3ZE');
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="../index.html" class="nav__logo"><div class="nav__logo-text">AVA<span>Executive Services</span></div></a>
+      <a href="../index.html" class="nav__logo" aria-label="AVA Executive Services home">
+        <div class="nav__logo-text">AVA<span>Executive Services</span></div>
+      </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="private-client.html">Private Client</a>
-        <a href="aviation.html">Aviation</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/services.html">Services</a>
+        <a href="../pages/private-client.html">Private Client</a>
+        <a href="../pages/aviation.html">Aviation</a>
+        <a href="../pages/how-it-works.html">How It Works</a>
+        <a href="../pages/contact.html" class="active">Contact</a>
       </nav>
-      <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Book a Consultation</a>
+      <a href="../pages/contact.html" class="btn btn--primary btn--sm nav__cta">Book a Consultation</a>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
-  <div class="mobile-menu">
-    <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
-    <a href="private-client.html">Private Client</a><a href="aviation.html">Aviation</a>
-    <a href="how-it-works.html">How It Works</a><a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn--primary">Book a Consultation</a>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="../index.html">Home</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../pages/services.html">Services</a>
+    <a href="../pages/private-client.html">Private Client</a>
+    <a href="../pages/aviation.html">Aviation</a>
+    <a href="../pages/how-it-works.html">How It Works</a>
+    <a href="../pages/contact.html">Contact</a>
+    <a href="../pages/contact.html" class="btn btn--primary">Book a Consultation</a>
   </div>
 
   <main>
     <header class="page-header">
       <div class="container">
         <span class="eyebrow">Contact</span>
-        <h1 class="h1">Book a Consultation</h1>
-        <p class="lead">Share a brief outline of your requirements. We respond within one business day. Do not submit passport scans, identity documents or bank information through this form.</p>
+        <h1 class="h1">Tell Us What You Need to Handle in Thailand.</h1>
+        <p class="lead">You do not need to know exactly which service you need before contacting AVA. Tell us what you are trying to achieve, what situation you are facing and what you need help coordinating.</p>
       </div>
     </header>
 
     <section class="section section--white">
-      <div class="container" style="max-width:680px;">
-        <form id="consultation-form" novalidate>
-          <div class="form-success" role="status"></div>
-          <div class="form-error" role="alert"></div>
-
+      <div class="container" style="max-width:640px;">
+        <form class="contact-form" id="contact-form" action="mailto:ava.executives@gmail.com" method="get" enctype="text/plain">
           <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="name">Full name <span class="req">*</span></label>
-              <input class="form-control" type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email <span class="req">*</span></label>
-              <input class="form-control" type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
-            </div>
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
           </div>
-
           <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone / WhatsApp</label>
-              <input class="form-control" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+66 …">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="nationality">Nationality</label>
-              <input class="form-control" type="text" id="nationality" name="nationality" placeholder="e.g. British">
-            </div>
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
           </div>
-
-          <div class="form-group">
-            <label class="form-label" for="location">Current location</label>
-            <input class="form-control" type="text" id="location" name="location" placeholder="City / country">
+          <div class="form-row">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
           </div>
-
-          <div class="form-group">
-            <label class="form-label" for="service">Service required <span class="req">*</span></label>
-            <select class="form-control" id="service" name="service" required>
-              <option value="">Select a service…</option>
-              <option value="path-assessment">Thailand Path Assessment</option>
-              <option value="visa-strategy">Visa &amp; Residency Strategy</option>
-              <option value="dtv">DTV / Digital Nomad Support</option>
-              <option value="soft-landing">Thailand Soft Landing</option>
-              <option value="relocation">Relocation Essentials / Family / Executive</option>
-              <option value="business-launch">Business Launch &amp; Establishment</option>
-              <option value="integrity-review">Corporate Integrity Review</option>
-              <option value="remediation">Corporate Remediation</option>
-              <option value="retainer">Corporate Integrity Retainer</option>
-              <option value="professional">Independent Professional Coordination</option>
-              <option value="property">Property Transaction Coordination</option>
-              <option value="concierge">Executive Concierge</option>
-              <option value="trip-design">Thailand Trip Design</option>
-              <option value="aviation">Aviation Executive Services</option>
-              <option value="private-client">Private Client Support</option>
-              <option value="other">Other / General enquiry</option>
+          <div class="form-row">
+            <label for="company">Company <span class="optional">(optional)</span></label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+          <div class="form-row">
+            <label for="country">Country of residence</label>
+            <input type="text" id="country" name="country" autocomplete="country-name">
+          </div>
+          <div class="form-row">
+            <label for="matter">What can AVA help you with? <span aria-hidden="true">*</span></label>
+            <textarea id="matter" name="matter" rows="5" required placeholder="Describe the situation and what you need coordinated."></textarea>
+          </div>
+          <div class="form-row">
+            <label for="prefer">Preferred contact method</label>
+            <select id="prefer" name="prefer">
+              <option value="email">Email</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="phone">Phone</option>
             </select>
           </div>
-
-          <div class="form-group">
-            <label class="form-label" for="message">Brief description <span class="req">*</span></label>
-            <textarea class="form-control" id="message" name="message" required rows="5" placeholder="Please outline your objective, timeline and any relevant context. Do not include passport numbers, bank details or other sensitive documents."></textarea>
-          </div>
-
           <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="contact-method">Preferred contact method</label>
-              <select class="form-control" id="contact-method" name="contact_method">
-                <option value="email">Email</option>
-                <option value="whatsapp">WhatsApp</option>
-                <option value="phone">Phone</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="preferred-date">Preferred consultation date</label>
-              <input class="form-control" type="date" id="preferred-date" name="preferred_date">
-            </div>
+            <label for="time">Preferred consultation time</label>
+            <input type="text" id="time" name="time" placeholder="e.g. Weekday mornings, ICT">
           </div>
-
-          <p class="form-note">By submitting this form you agree to our <a href="privacy.html" style="color:var(--gold-500);">Privacy Policy</a>. We will use the information only to respond to your enquiry.</p>
-
-          <div class="btn-group" style="margin-top:0.75rem; flex-direction:column;">
-            <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">Send by Email</button>
-            <button type="button" id="whatsapp-submit" class="btn btn--secondary btn--lg" style="width:100%;">Send by WhatsApp</button>
-          </div>
+          <p class="small mb-3" style="color:var(--slate-500);">Confidential enquiries welcome.</p>
+          <button type="submit" class="btn btn--primary btn--lg">Request a Consultation</button>
         </form>
+        <p class="small mt-3" style="color:var(--slate-500);">Prefer WhatsApp? <a href="https://wa.me/66936151939" style="color:var(--gold-500);">Message AVA</a> · Email: <a href="mailto:ava.executives@gmail.com" style="color:var(--gold-500);">ava.executives@gmail.com</a></p>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo-text">AVA<span>Executive Services</span></div>
-          <p>Independent client-side coordination, local execution and Thailand intelligence.</p>
+          <p>Thailand, Professionally Managed.</p>
+          <p style="margin-top:0.5rem;">Independent client-side coordination for individuals, families and businesses.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html">All Services</a>
-          <a href="private-client.html">Private Client</a>
-          <a href="aviation.html">Aviation</a>
-          <a href="how-it-works.html">How It Works</a>
+          <a href="../pages/services.html">All Services</a>
+          <a href="../pages/private-client.html">Private Client</a>
+          <a href="../pages/aviation.html">Aviation</a>
+          <a href="../pages/how-it-works.html">How It Works</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="about.html">About AVA</a>
-          <a href="contact.html">Contact</a>
-          <a href="service-policy.html">Service Policy</a>
+          <a href="../pages/about.html">About AVA</a>
+          <a href="../pages/contact.html">Contact</a>
+          <a href="../pages/service-policy.html">Service Policy</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="service-policy.html">Disclaimer</a>
+          <a href="../pages/privacy.html">Privacy Policy</a>
+          <a href="../pages/terms.html">Terms of Service</a>
+          <a href="../pages/service-policy.html">Disclaimer</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; <span data-year></span> AVA Executive Services. All rights reserved.</p>
-        <p>Administrative, coordination and concierge services. Not a substitute for licensed legal, tax or accounting advice.</p>
+        <p>AVA provides administrative, executive, concierge and coordination services. These do not constitute legal, tax, accounting, engineering, immigration or other regulated professional advice. Where required, clients are coordinated with appropriately qualified professionals.</p>
       </div>
     </div>
   </footer>
   <script src="../js/main.js"></script>
-  <script>
-    // Prefill service from query string
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const service = params.get("service");
-      if (service) {
-        const select = document.getElementById("service");
-        if (select) {
-          const option = Array.from(select.options).find(o => o.value === service);
-          if (option) select.value = service;
-        }
-      }
-    })();
-  </script>
 </body>
 </html>
