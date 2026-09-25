@@ -34,10 +34,9 @@
     }
   });
 
-  /* Consultation form — send via email or WhatsApp */
+  /* Consultation form — send via email */
   const form = document.getElementById("consultation-form");
-  const AVA_EMAIL = "ava.executives@gmail.com";
-  const AVA_WHATSAPP = "66936151939";
+  const AVA_EMAIL = "ava@avaexecutiveservices.com";
 
   function getFormData(form) {
     const data = new FormData(form);
@@ -96,7 +95,7 @@
       "",
       "Name: " + d.name,
       "Email: " + d.email,
-      "Phone / WhatsApp: " + (d.phone || "—"),
+      "Phone: " + (d.phone || "—"),
       "Nationality: " + (d.nationality || "—"),
       "Current location: " + (d.location || "—"),
       "Service required: " + (d.service || "—"),
@@ -121,20 +120,10 @@
       const successEl = form.querySelector(".form-success");
       if (successEl) {
         successEl.textContent =
-          "Your email app should open with the request ready to send. If it does not, please email us directly.";
+          "Your email app should open with the request ready to send. If it does not, please email us directly at ava@avaexecutiveservices.com.";
         successEl.classList.add("is-visible");
       }
     });
-
-    const waBtn = document.getElementById("whatsapp-submit");
-    if (waBtn) {
-      waBtn.addEventListener("click", () => {
-        if (!validateForm(form)) return;
-        const d = getFormData(form);
-        const text = encodeURIComponent(buildMessageBody(d));
-        window.open("https://wa.me/" + AVA_WHATSAPP + "?text=" + text, "_blank", "noopener");
-      });
-    }
   }
 
   /* Subtle reveal on scroll */
